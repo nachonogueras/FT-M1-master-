@@ -2,7 +2,9 @@
 
 function BinarioADecimal(num) {}
 
-function DecimalABinario(num) {}
+function DecimalABinario(num) {
+   //comentario
+}
 
 module.exports = {
    BinarioADecimal,
