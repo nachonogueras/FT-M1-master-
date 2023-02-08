@@ -13,10 +13,19 @@ Secuencia:  0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...
 
 Como ejercicio adicional y completamente opcional, al terminar de resolver este problema pueden intentar definir funciones que logren los mismos resultados pero de manera iterativa.
 */
+//5! = 5 * 4 * 3 * 2 * 1
+function nFactorial(n) {
+  if(n > -1 &&  n < 2) return 1
+  if(n < 0) return "no existe el facotiral de num negativos"
+  return n * nFactorial(n - 1);
+}
 
-function nFactorial(n) {}
+function nFibonacci(n) { 
+  if (n < 2) return n
+  return nFibonacci(n-1) + nFibonacci(n-2);
+  }
 
-function nFibonacci(n) {}
+
 
 /*
 Implementar la clase Queue, sabiendo que es una estructura de tipo FIFO, donde el primer elemento que ingresa es el primero que se quita. Definir los siguientes métodos:
@@ -27,7 +36,22 @@ Implementar la clase Queue, sabiendo que es una estructura de tipo FIFO, donde e
 Pueden utilizar class o función constructora.
 */
 
-function Queue() {}
+class Queue {
+  constructor() {
+    this.queue = [];
+  }
+  enqueue(elemento) {
+    this.queue.push(elemento);
+  }
+  dequeue(){
+    return this.queue.shift();
+  }
+  size(){
+    return this.queue.length;
+  }
+
+}
+
 
 /*⚠️ No modificar nada debajo de esta línea ⚠️*/
 module.exports = {
